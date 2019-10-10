@@ -2,6 +2,11 @@
   header {
     border-bottom: 2px dashed @navigation-border;
 
+    @media @mobile {
+      width: 90%;
+      margin: auto;
+    }
+
     img {
       margin-bottom: 2%;
     }
@@ -38,9 +43,19 @@
       width: 48%;
       padding-left: 1%;
 
+      @media @mobile {
+        width: 88%;
+        padding: 2% 0;
+        margin: auto;
+      } //This closes content media
+
       img {
         border-radius: 10px;
-      }
+
+        @media @mobile {
+          width: 100%;
+        }
+      } //This closes content image
     }
   } //This closes content section
 
@@ -94,11 +109,20 @@
     justify-content: space-between;
 
     @media @mobile {
+      margin: 0 10%;
+    }
+
+    @media @mobile {
       display: flex;
       flex-direction: column;
       align-items: center;
     } // this closes content media
 
+    .btn {
+      @media @mobile {
+        width: 100%;
+      } //This closes media button
+    } //This closes button
     .destination {
       width: 30%;
       margin-bottom: 30px;
