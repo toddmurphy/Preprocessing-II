@@ -1,35 +1,84 @@
 .home {
+  header {
+    border-bottom: 2px dashed @navigation-border;
 
+    @media @mobile {
+      width: 90%;
+      margin: auto;
+    }
+
+    img {
+      margin-bottom: 2%;
+    }
+  }
   .content-section {
     margin: 30px 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 
-   
-    
+    @media @mobile {
+      display: flex;
+      flex-direction: column;
+    } // This ends mobile content section
+
     .text-content {
       width: 48%;
       padding-right: 1%;
-    }
+
+      @media @mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 0 5%;
+
+        h2 {
+          width: 100%;
+        }
+      } // This close media text content
+    } // This closes text content
 
     .img-content {
       width: 48%;
       padding-left: 1%;
 
+      @media @mobile {
+        width: 88%;
+        padding: 2% 0;
+        margin: auto;
+      } //This closes content media
+
       img {
         border-radius: 10px;
-      }
+
+        @media @mobile {
+          width: 100%;
+        }
+      } //This closes content image
     }
-  }
+  } //This closes content section
 
   .inverse-content {
     padding-bottom: 30px;
     border-bottom: 2px dashed @navigation-border;
 
+    @media @mobile {
+      display: flex;
+      flex-direction: column-reverse;
+    } //this closes media inverse conent
+
     .text-content {
       padding-left: 1%;
       padding-right: 0;
+
+      @media @mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 0 5%;
+      } // This close media inverse content
     }
 
     .img-content {
@@ -42,6 +91,12 @@
     width: 75%;
     margin: 0 auto 30px;
 
+    @media @mobile {
+      display: flex;
+      flex-direction: column;
+      width: 95%;
+    } // This closes content media
+
     img {
       border-radius: 10px;
     }
@@ -53,9 +108,30 @@
     display: flex;
     justify-content: space-between;
 
+    @media @mobile {
+      margin: 0 10%;
+    }
+
+    @media @mobile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    } // this closes content media
+
+    .btn {
+      .custom-btn(@button-bg, 200px, @main-bg); //Parametric button
+
+      @media @mobile {
+        width: 100%;
+      } //This closes media button
+    } //This closes button
     .destination {
       width: 30%;
       margin-bottom: 30px;
-    }
+
+      @media @mobile {
+        width: 90%;
+      } //This closes destination media
+    } // this close destination
   }
-}// home
+} // home

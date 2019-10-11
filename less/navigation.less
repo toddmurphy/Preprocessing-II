@@ -1,1 +1,43 @@
 // Navigation Styles here
+nav {
+  display: flex;
+  justify-content: flex-end;
+  padding: 3%;
+  border-bottom: 2px dashed @navigation-border;
+  width: 100%;
+
+  @media @mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  } //this closes the nav media
+
+  div {
+    width: 50%;
+  } //this closes the div
+
+  a {
+    font-size: 1.6rem;
+    text-decoration: none;
+  } //this closes the anchor
+} //This closes the nav
+
+nav .logo {
+  margin-left: 5%;
+
+  @media @mobile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+nav .links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
+  color: black;
+  width: 100%;
+}
